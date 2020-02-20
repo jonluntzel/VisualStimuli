@@ -72,7 +72,7 @@ def groupswitch(imgs, r, d):
 #takes an image and a background color to overlay image upon. built these assuming an RGB image.
 def preparerot(imge):
 #     image = imge.copy()
-    count = 0
+    #count = 0
     for i in range(imge.shape[0]): # for every pixel:
         for j in range(imge.shape[1]):
             if imge[i][j][0] < 127 and imge[i][j][1] < 127 and imge[i][j][2] < 127: #is [0, 0, 0]:
@@ -82,7 +82,7 @@ def preparerot(imge):
 #                     plt.figure()
 #                     plt.imshow(imge)
                 imge[i][j] = [10,10,10] #(0,0,0,0)#[10, 48 ,22] #[255, 192, 203]
-                count += 1
+                #count += 1
                 
 
     #print("preparerot: ", np.amax(imge))
@@ -91,7 +91,6 @@ def preparerot(imge):
 #     plt.imshow(imge)
     return imge
 
-#takes an image and a background color to overlay image upon. built these assuming an RGB image.
 # def preparerot(imge):
 # #     image = imge.copy()
     
