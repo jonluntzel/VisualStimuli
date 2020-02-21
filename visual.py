@@ -24,7 +24,7 @@ def compressx(img, factor):
     
 #     im2[100+sub1:100+(shrunk.shape[0]+sub1),200+sub2:200+(shrunk.shape[1]+sub2)] = shrunk
     im2[sub1:(shrunk.shape[0]+sub1),sub2:(shrunk.shape[1]+sub2),:] = shrunk
-    print(sub1, sub2, shrunk.shape, im2.shape)
+    #print(sub1, sub2, shrunk.shape, im2.shape)
 #     print("compressx")
 #     plt.figure()
 #     plt.imshow(im2)
@@ -56,7 +56,7 @@ def groupswitch(imgs, r, d):
                 if (i[j] == 1.0) or (i[j] == 255):
                     i[j] = 0
                 else:
-                    i[j] = 255
+                    i[j] = 1.0#255
     return copy
 
 #         for j in range(0, 800*800*3, 3):
